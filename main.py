@@ -1,4 +1,4 @@
-import sys
+import sys#а
 
 from PyQt6 import uic, QtGui
 from PyQt6.QtWidgets import QApplication, QMainWindow
