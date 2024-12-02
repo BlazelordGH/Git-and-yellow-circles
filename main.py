@@ -31,9 +31,16 @@ class YellowCirclesApp(QMainWindow):
 
         pen = QtGui.QPen()
         pen.setWidth(4)
-        pen.setColor(QtGui.QColor('yellow'))
-        painter.setPen(pen)
+
+        colors = [[0, 0, 0], [255, 128, 128],
+                  [100, 100, 100], [255, 0, 255],
+                  [192, 0, 56], [0, 255, 0],
+                  [255, 255, 0], [128, 255, 0]]
         for i in range(randint(5, 50)):
+            colors_index = randint(0, len(colors) - 1)
+            pen.setColor(QColor(colors[colors_index][0], colors[colors_index][1], colors[colors_index][2]))
+            painter.setPen(pen)
+
             diameter = randint(10, 50)
             x, y = randint(20, 780 - diameter - 20), randint(20, 450 - diameter - 20)
             painter.drawEllipse(x, y, diameter, diameter)
