@@ -33,10 +33,10 @@ class YellowCirclesApp(QMainWindow):
         pen.setWidth(4)
         pen.setColor(QtGui.QColor('yellow'))
         painter.setPen(pen)
-        for i in range(randint(5, 35)):
-            radius = randint(10, 35)
-            x, y = randint(20, 780 - radius - 20), randint(20, 450 - radius - 20)
-            painter.drawEllipse(x, y, radius, radius)
+        for i in range(randint(5, 50)):
+            diameter = randint(10, 50)
+            x, y = randint(20, 780 - diameter - 20), randint(20, 450 - diameter - 20)
+            painter.drawEllipse(x, y, diameter, diameter)
 
         painter.end()
         self.draw_label.setPixmap(canvas)
